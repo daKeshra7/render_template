@@ -2,8 +2,11 @@
 
 {% block content %}
 
-<form action='' method="POST" enctype='multipart/form-data'> {% csrf_token %}
-{{ form.as_p }}
+<form action='.' method='POST'> {% csrf_token %}
+<input type='text' name='title' Placeholder='Your Search' />
 <input type='submit' value='Save' />
 </form>
+
+
+
 {% endblock content %}

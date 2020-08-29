@@ -5,15 +5,21 @@ from .models import Products
 from .forms import ProductForm
 
 # Create your views here.
+
 def product_form_view(request):
-    form = ProductForm(request.POST or None, request.FILES or None)
-    if form.is_valid():
-        form.save()
-        form = ProductForm()
-    context = {
-        'form': form
-    }
+    print(request.POST['title'])
+    print(request.POST)
+    context = {}
     return render(request, "product/product_create.html", context)
+# def product_form_view(request):
+#     form = ProductForm(request.POST or None, request.FILES or None)
+#     if form.is_valid():
+#         form.save()
+#         form = ProductForm()
+#     context = {
+#         'form': form
+#     }
+#     return render(request, "product/product_create.html", context)
     
 
 
