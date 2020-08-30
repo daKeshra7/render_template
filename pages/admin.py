@@ -1,6 +1,6 @@
 from django.contrib import admin
 
 # Register your models here.
-from pages.models import Products
+from pages.models import product_info
 
-admin.site.register(Products)
+admin.site.register(product_info)
