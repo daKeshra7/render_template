@@ -2,10 +2,18 @@
 
 {% block content %}
 
-<form action='.' method='POST'> {% csrf_token %}
-<input type='text' name='title' Placeholder='Your Search' />
-<input type='submit' value='Save' />
-</form>
+{{ form.as_p}}
+    <center>
+    <p> <h1>{{ object.first_name }}</h1></p>
+    <br>
+    <p><h1>{{ object.last_name }}</h1></p>
+    <br>
+    <p><h1>{{ object.height }}</h1></p>
+    <br>
+    <p><h1>{{ object.about_you }}</h1></p>
+    <br>
+    <p><h1>{{ object.photo }}</h1></p>
+    </center>
 
 
 
